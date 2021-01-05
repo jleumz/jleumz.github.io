@@ -1,0 +1,88 @@
+:root {
+    --rem: 20px;
+    --mobile-rem: 18px;
+    --small: 16px;
+    --tiny: 15px;
+  
+    --half-small: calc(var(--small) * 0.5);
+    --quarter-small: calc(var(--small) * 0.25);
+  
+    --line-height: 1.5;
+  
+    --primary-font: "SourceSerifPro", "Charter", "Iowan Old Style", Iowan,
+      "Georgia", serif;
+    /* --primary-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; */
+    --primary-font-bold-weight: 700;
+  
+    --secondary-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    --secondary-font-bold-weight: 500;
+  
+    --heading-font: var(--secondary-font);
+  
+    --monospace-font: "SF Mono", "Roboto Mono", Consolas, "Liberation Mono", Menlo,
+      monospace;
+    --monospace-font-size: 15px;
+    --monospace-font-bold-weight: 500;
+  
+    --smallcaps-font-size: 12px;
+    --smallcaps-letter-spacing: 0.025em;
+    --smallcaps-weight: 700;
+  
+    --width: 650px; /* Referenced elsewhere, change there too */
+    --big-width: 1300px;
+  
+    --radius: 8px;
+  
+    --shadow: 0 0rem 1rem rgba(0, 0, 0, 0.1);
+  
+    --black: #101020;
+    --dark-gray: #282851; /* #050526; */
+    --gray: #9393a8;
+    --light-gray: #e9e9ed;
+    --lighter-gray: #f7f7f8;
+    --white: #ffffff;
+  
+    --link-gray: #ccccdd;
+  
+    --red: #d10c6e;
+    --transparent-red: #ff1a1a22;
+    --green: #029e74;
+    --transparent-green: #029e7422;
+    --pink: #ff0080;
+    --transparent-pink: #ff008022;
+    --blue: #0084ff;
+    --transparent-blue: #0070f322;
+    --purple: #5c00c4;
+    --transparent-purple: #3108d322;
+    --yellow: #f5a623;
+    --transparent-yellow: #f5a62322;
+    --teal: #00dba0;
+    --transparent-teal: #00ffbb44;
+  
+    --code-purple: #5c00c4;
+    --code-blue: #0084ff;
+    --code-pink: #d10c6e;
+  
+    --transparent-white: #ffffff11;
+    --less-transparent-white: #ffffff55;
+  }
+
+  .dark:root {
+
+    --black: #fff;
+    --dark-gray: #aaaabb;
+    --gray: #666677;
+    --light-gray: #222;
+    --lighter-gray: #111;
+    --white: #000;
+  
+    --link-gray: #444466;
+  
+    --code-purple: #aaed36;
+    --code-blue: #00ccff;
+    --code-pink: #ff0080;
+  
+    --transparent-white: #ffffff11;
+    --less-transparent-white: #ffffff22;
+  }

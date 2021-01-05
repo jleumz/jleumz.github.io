@@ -1,0 +1,40 @@
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/* added flex directions for container (.grid)*/
+.reverse-direction {
+    flex-direction: row-reverse;
+}
+
+.column-reverse-direction {
+    flex-direction: column-reverse;
+}
+
+.column-direction {
+    flex-direction: column;
+}
+
+/* .center {
+    justify-content: center;
+    align-items: center;
+} */
+
+.column {
+	box-sizing: border-box;
+    flex: 1;
+    /* padding: 0.5rem; */
+}
+
+.bigger { flex: 2.5; }
+
+.halves .column  { flex: 0 0 50%; }
+.thirds .column  { flex: 0 0 33.3333%; }
+.fourths .column { flex: 0 0 25%; }
+
+/* if width too small --> converts to block */
+@media (max-width: 900px) {
+    .grid { display: block; }
+}
+
