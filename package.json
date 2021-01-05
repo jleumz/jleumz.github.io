@@ -1,0 +1,28 @@
+{
+    "name": "11ty-blog",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "npx @11ty/eleventy --serve"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jleumz/11ty-blog.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/jleumz/11ty-blog/issues"
+    },
+    "homepage": "https://github.com/jleumz/11ty-blog#readme",
+    "devDependencies": {
+        "@11ty/eleventy": "^0.11.1"
+    },
+    "dependencies": {
+        "@11ty/eleventy-img": "^0.7.3",
+        "moment": "^2.29.1"
+    }
+}
