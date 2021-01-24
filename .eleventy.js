@@ -55,12 +55,15 @@ module.exports = (config) => {
     });
 
 
+    // add png to get image directory with png in docs + default values
+    config.setTemplateFormats([ 'png', 'html', 'liquid', 'ejs', 'md',
+        'hbs', 'mustache', 'haml', 'pug', 'njk', '11ty.js' ])
+
+
     return {
         dir: {
             output: "docs"
         }
     }
 
-    // add png to get image directory with png in _site
-    // config.setTemplateFormats([ 'png' ])
 };
