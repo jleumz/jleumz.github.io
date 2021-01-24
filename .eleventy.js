@@ -4,11 +4,6 @@ const moment = require('moment');
 
 module.exports = (config) => {
 
-
-    dir: {
-        output: "docs"
-    }
-
     // Add related posts
     config.addLiquidShortcode('related', (title, url) => `
         <a href="${url}" class="related">${title}</a>
@@ -48,7 +43,7 @@ module.exports = (config) => {
             ready: function (err, bs) {
 
                 bs.addMiddleware("*", (req, res) => {
-                    const content_404 = fs.readFileSync('_site/404.html');
+                    const content_404 = fs.readFileSync('docs/404.html');
                     // Add 404 http status code in request header.
                     res.writeHead(404, { "Content-Type": "text/html; charset=UTF-8" });
                     // Provides the 404 content without redirect.
@@ -58,6 +53,13 @@ module.exports = (config) => {
             }
         }
     });
+
+
+    return {
+        dir: {
+            output: "docs"
+        }
+    }
 
     // add png to get image directory with png in _site
     // config.setTemplateFormats([ 'png' ])
