@@ -1,0 +1,412 @@
+
+:root {
+    --rem: 20px;
+    --mobile-rem: 18px;
+    --small: 16px;
+    --tiny: 15px;
+  
+    --half-small: calc(var(--small) * 0.5);
+    --quarter-small: calc(var(--small) * 0.25);
+  
+    --line-height: 1.5;
+  
+    --primary-font: "SourceSerifPro", "Charter", "Iowan Old Style", Iowan,
+      "Georgia", serif;
+    /* --primary-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; */
+    --primary-font-bold-weight: 700;
+  
+    --secondary-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    --secondary-font-bold-weight: 500;
+  
+    --heading-font: var(--secondary-font);
+  
+    --monospace-font: "SF Mono", "Roboto Mono", Consolas, "Liberation Mono", Menlo,
+      monospace;
+    --monospace-font-size: 15px;
+    --monospace-font-bold-weight: 500;
+  
+    --smallcaps-font-size: 12px;
+    --smallcaps-letter-spacing: 0.025em;
+    --smallcaps-weight: 700;
+  
+    --width: 650px; /* Referenced elsewhere, change there too */
+    --big-width: 1300px;
+  
+    --radius: 8px;
+  
+    --shadow: 0 0rem 1rem rgba(0, 0, 0, 0.1);
+  
+    --black: #101020;
+    --dark-gray: #282851; /* #050526; */
+    --gray: #9393a8;
+    --light-gray: #e9e9ed;
+    --lighter-gray: #f7f7f8;
+    --white: #ffffff;
+  
+    --link-gray: #ccccdd;
+  
+    --red: #d10c6e;
+    --transparent-red: #ff1a1a22;
+    --green: #029e74;
+    --transparent-green: #029e7422;
+    --pink: #ff0080;
+    --transparent-pink: #ff008022;
+    --blue: #0084ff;
+    --transparent-blue: #0070f322;
+    --purple: #5c00c4;
+    --transparent-purple: #3108d322;
+    --yellow: #f5a623;
+    --transparent-yellow: #f5a62322;
+    --teal: #00dba0;
+    --transparent-teal: #00ffbb44;
+  
+    --code-purple: #5c00c4;
+    --code-blue: #0084ff;
+    --code-pink: #d10c6e;
+  
+    --transparent-white: #ffffff11;
+    --less-transparent-white: #ffffff55;
+  }
+
+  .dark:root {
+
+    --black: #fff;
+    --dark-gray: #aaaabb;
+    --gray: #666677;
+    --light-gray: #222;
+    --lighter-gray: #111;
+    --white: #000;
+  
+    --link-gray: #444466;
+  
+    --code-purple: #aaed36;
+    --code-blue: #00ccff;
+    --code-pink: #ff0080;
+  
+    --transparent-white: #ffffff11;
+    --less-transparent-white: #ffffff22;
+  }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizelegibility;
+  }
+  
+  html {
+    font-family: var(--primary-font);
+    font-size: var(--rem);
+    line-height: var(--line-height);
+    color: var(--dark-gray);
+    background: var(--white);
+    cursor: default;
+  }
+  
+  img {
+    max-width: 100%;
+    display: block;
+    border-radius: var(--radius);
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: 100ms color ease-in-out;
+    background-image: linear-gradient(var(--link-gray) 75%, var(--link-gray) 0px);
+    background-position: 0px 95%;
+    background-repeat: repeat-x;
+    background-size: 1px 1px;
+  }
+
+  main {
+    max-width: var(--width);
+    margin: 2rem auto 6rem;
+  }
+
+
+  a:hover {
+    color: var(--gray);
+  }
+
+  :target {
+    color: var(--black);
+    animation-name: blink;
+    animation-duration: 300ms;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-iteration-count: 6;
+  }
+
+  @keyframes blink {
+    from {
+      color: var(--black);
+      text-shadow: 0;
+    }
+    to {
+      color: var(--pink);
+      text-shadow: 0 0 1rem var(--transparent-pink);
+    }
+  }
+
+  button {
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  button {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background: none;
+    font-size: inherit;
+    color: inherit;
+  }
+  
+  .button {
+    padding: 0.5rem 1rem;
+    background: #000;
+    border: 0;
+    color: var(--white);
+  }
+
+  .top-nav a:hover {
+    color: var(--black);
+  }
+
+/* Top navigation bar */
+.top-nav {
+    max-width: var(--big-width);
+    margin: auto;
+    border-bottom: 1px solid var(--light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--secondary-font);
+    font-weight: var(--secondary-font-bold-weight);
+    font-size: var(--small);
+  }
+  
+  .mobile-nav {
+    display: none;
+  }
+  
+  /* Navigation list */
+  .top-nav ul {
+    list-style: none;
+    display: flex;
+    margin-left: 1.5rem;
+    align-items: center;
+  }
+  
+  .top-nav li {
+    display: block;
+    padding: 0;
+  }
+  
+  .top-nav a {
+    color: var(--gray);
+    background: none;
+    text-decoration: none;
+    padding: 1rem 0;
+    margin-right: 1rem;
+    display: block;
+  }
+  
+  .top-nav a:hover {
+    color: var(--black);
+  }
+  
+ 
+  
+  .bottom-nav {
+    max-width: var(--big-width);
+    margin: auto;
+    border-top: 1px solid var(--light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--secondary-font);
+    font-weight: var(--secondary-font-bold-weight);
+    font-size: var(--small);
+  }
+
+  .bottom-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* margin-left: 1.5rem; */
+    align-items: center;
+    width: -webkit-fill-available;
+  }
+
+  .bottom-nav li {
+    display: block;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 0.5rem;
+    /* margin-top: 0.5rem; */
+  }
+
+  .bottom-nav li:first-child {
+      margin-top: 0.5rem;
+  }
+
+  .bottom-nav a {
+    color: var(--gray);
+    background: none;
+    text-decoration: none;
+    padding: 1rem 0;
+    /* margin-right: 1rem; */
+    display: block;
+  }
+
+  .bottom-nav a:hover {
+    color: var(--black);
+  }
+  
+
+/* header of article */
+
+header {
+    margin: 4rem 0;
+  }
+  
+  /* Change elsewhere */
+  @media (max-width: 650px) {
+    header {
+      margin: 3rem 0;
+    }
+  }
+  
+  header h1 {
+    margin: calc(var(--tiny) * 0.5) 0;
+  }
+  
+  header .description {
+    color: var(--pink);
+    font-size: var(--tiny);
+    font-family: var(--secondary-font);
+  }
+  
+  header .description a {
+    background: none;
+  }
+  
+  header .description a:hover {
+    color: var(--black);
+  }
+  
+  time {
+    font-weight: 500;
+    color: var(--gray);
+  }
+  
+
+
+@media (min-width: 480px) {
+
+}
+
+@media (min-width: 800px) {
+
+}
+
+@media (min-width: 110px) {
+
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+  color: var(--heading-color);
+  font-weight: 700;
+}
+
+/* h1 { font-size: 2rem; } */
+
+
+h1 {
+    letter-spacing: -0.0125em;
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--black);
+    font-family: var(--heading-font);
+  }
+/* h2 { font-size: 1.75rem; } */
+h2 {
+    font-family: var(--secondary-font);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.0125em;
+    margin: 3rem 0 1rem;
+    line-height: 1.25;
+  }
+/* h3 { font-size: 1.5rem; } */
+h3 {
+    font-family: var(--secondary-font);
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin: 3rem 0 1rem;
+    line-height: 1.25;
+  }
+/* h4 { font-size: 1.25rem; } */
+h4 {
+    font-size: 1rem;
+    font-weight: normal;
+    color: var(--gray);
+    font-family: var(--secondary-font);
+  }
+h5 { font-size: 1rem; }
+h6 { font-size: 0.8rem; }
+
+p, li {
+  margin: 1rem 0;
+}
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/* added flex directions for container (.grid)*/
+.reverse-direction {
+    flex-direction: row-reverse;
+}
+
+.column-reverse-direction {
+    flex-direction: column-reverse;
+}
+
+.column-direction {
+    flex-direction: column;
+}
+
+/* .center {
+    justify-content: center;
+    align-items: center;
+} */
+
+.column {
+	box-sizing: border-box;
+    flex: 1;
+    /* padding: 0.5rem; */
+}
+
+.bigger { flex: 2.5; }
+
+.halves .column  { flex: 0 0 50%; }
+.thirds .column  { flex: 0 0 33.3333%; }
+.fourths .column { flex: 0 0 25%; }
+
+/* if width too small --> converts to block */
+@media (max-width: 900px) {
+    .grid { display: block; }
+}
+

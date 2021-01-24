@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>dev</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/styles.css" rel="stylesheet">
+    <script async defer data-website-id="67f4abfc-bff4-41d3-be40-b710fe95a8ab" src="http://localhost:3000/umami.js"></script>
+  </head>
+
+  <body>
+    <nav class="top-nav">
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/portfolio">Portfolio</a></li>
+        <li> <button id="test-button-1" onclick="clickButton()">Test Button</button></li>
+    </ul>
+</nav>
+
+<!-- just put function in liquid table to trigger js  -->
+<script>
+    const button = document.getElementById("test-button-1");
+
+    function clickButton() {
+        console.log("Button clicked!");
+    }
+</script>
+    <main>
+        <article>
+    <header>
+        <div>
+            <time>December 27th 2020</time>
+        </div>
+        <h1>This is my third post</h1>
+    </header>
+    <h1>Third Post</h1>
+
+</article>
+    </main>   
+    <footer>
+    <nav class="bottom-nav">
+        <ul>
+            <li>Johannes Leussler 2020</li>
+            <li><a href="https://github.com/jleumz" target="_blank" rel="noopener noreferrer"><img
+                        src="/img/logos/github/PNG/GitHub-Mark-32px.png"></a></li>
+        </ul>
+    </nav>
+</footer>
+
+<!-- footer belongs in article tag ob website. -->
+  </body>
+
+</html>
